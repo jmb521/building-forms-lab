@@ -1,13 +1,19 @@
 import React, { Component } from 'react'
-
+import {connect} from 'react-redux'
+import BandInput from '../components/BandInput'
 class BandsContainer extends Component {
+
+
+  addBand = ()=> {
+
+  }
   render() {
     return(
       <div>
-        BandsContainer
+        <BandInput addBand={this.addBand}/>
       </div>
     )
   }
 }
 
-export default BandsContainer
+export default connect({addBand})(BandsContainer)
